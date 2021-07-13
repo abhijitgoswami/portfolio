@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CertificateContainer = styled.div`
     color: #fff;
-    background: ${(lightBg) => (lightBg.lightBg ? 'black' : 'white')};
+    background: ${(lightBg) => (lightBg.lightBg ? 'white' : 'black')};
 
     @media screen and (max-width: 768px){
         padding: 100px 0;
@@ -25,10 +25,10 @@ export const CertificateRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    grid-template-areas: ${(imgstart) => (imgstart ? `'col2 col1'` : `'col1 col2'`)};
+    grid-template-areas: ${(imgStart) => (imgStart.imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px){
-        grid-template-areas: ${(imgstart) => (imgstart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+        grid-template-areas: ${(imgStart) => (imgStart.imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     }
 `
 
@@ -97,4 +97,9 @@ export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
+`
+
+export const BtnWrap = styled.div`
+    display: flex;
+    justify-content: flex-start;
 `

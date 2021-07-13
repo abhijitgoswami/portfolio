@@ -1,7 +1,8 @@
 import React from 'react'
-import { Column1, Column2, Heading, Img, ImgWrap, CertificateContainer, CertificateRow, CertificateWrapper, Subtitle, TextWrapper, TopLine } from './CertificateElement'
+import { Column1, Column2, Heading, Img, ImgWrap, CertificateContainer, CertificateRow, CertificateWrapper, Subtitle, TextWrapper, TopLine, BtnWrap } from './CertificateElement'
+import { Button } from '../Introduction/IntroElement'
 
-const Certificate = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, img, alt}) => {
+const Certificate = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, img, alt, btnLabel, primary, dark, dark2}) => {
     return (
         <React.Fragment>
             <CertificateContainer lightBg={lightBg} id={id}>
@@ -10,11 +11,16 @@ const Certificate = ({lightBg, id, imgStart, topLine, lightText, headline, darkT
                         <Column1>
                             <TextWrapper>
                                 <Heading lightText={lightText}>{headline}</Heading>
-                            </TextWrapper>
+                                <BtnWrap>
+                                    <Button to="home" smooth={true} duration={500} spy={true} exact="true" offset={-80} 
+                                    primary={primary ? 1: 0}
+                                    dark={dark ? 1 : 2}
+                                    dark2={dark2 ? 1 : 2}>{btnLabel}</Button>
+                                </BtnWrap>
+                            </TextWrapper> 
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                            {console.log(img)}
                                 <Img src={img.default} alt={alt}/>
                             </ImgWrap>
                         </Column2>

@@ -4,7 +4,7 @@ import Sidebar from '../Components/Sidebar'
 import { useState } from 'react'
 import Intro from '../Components/Introduction'
 import Certificate from '../Components/Proficiency'
-import {obj1} from '../Components/Proficiency/Data'
+import {certificateObj, exprienceObj, skillObj} from '../Components/Proficiency/Data'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -18,7 +18,9 @@ const Home = () => {
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle={toggle}/>
             <Intro/>
-            <Certificate {...obj1}/>
+            <Certificate {...certificateObj}/>
+            <Certificate {...skillObj}/>
+            <Certificate {...exprienceObj}/>
         </React.Fragment>
     )
 }
