@@ -17,7 +17,8 @@ const Intro = () => {
             </IntroBg>
             <IntroContent>
                 <IntroH1>Hello, I am Abhijit Goswami</IntroH1>
-                <IntroP>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                <IntroP>
+                    I am Working as a Software Engineer in Cognizant Technology Solutions, Kolkata.
                 </IntroP>
                 <IntroBtnWrapper>
                     <Button to="/contact" onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>Contact me{hover ? <ArrowForward/> : <ArrowRight/>}</Button>
